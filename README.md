@@ -5,6 +5,18 @@
 [![Coveralls][coveralls-badge]][coveralls]
 
 ## Usage
+
+#### Simple
+```js
+import Currency from 'react-currency-formatter';
+
+<Currency
+  quantity={45685}
+  currency="EUR"
+/>
+```
+
+#### Complex
 ```js
 import Currency from 'react-currency-formatter';
 
