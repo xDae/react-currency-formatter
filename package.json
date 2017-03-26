@@ -27,11 +27,12 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
-  "author": "",
+  "author": "jose miguel bejarano",
   "homepage": "",
   "license": "MIT",
   "repository": "",
   "keywords": [
-    "react-component"
+    "react-component",
+		"currency formatter"
   ]
 }
