@@ -15,9 +15,9 @@ describe('Component', () => {
     unmountComponentAtNode(node)
   })
 
-  it('displays a welcome message', () => {
+  it('render correctly', () => {
     render(<Component/>, node, () => {
-      expect(node.innerHTML).toContain('Welcome to React components')
+      expect(node).toExist()
     })
   })
 })
