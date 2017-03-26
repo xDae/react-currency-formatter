@@ -1,10 +1,14 @@
-# react-cformatter
+# 💵 react currency formatter
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-Describe react-cformatter here.
+## TODO
+[ ] create description
+[ ] create documentation
+[ ] create component playground (w/ Storybook)
+
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
@@ -14,3 +18,5 @@ Describe react-cformatter here.
 
 [coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/user/repo
+
+
