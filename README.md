@@ -5,9 +5,9 @@
 [![Coveralls][coveralls-badge]][coveralls]
 
 ## TODO
-[ ] create description
-[ ] create documentation
-[ ] create component playground (w/ Storybook)
+- [ ] create description
+- [ ] create documentation
+- [ ] create component playground (w/ Storybook)
 
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
