@@ -4,6 +4,21 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
+## Usage
+```js
+import Currency from 'react-currency-formatter';
+
+<Currency
+  className="my-classname"  // Optional
+  quantity={45685}          // Required
+  currency="USD"            // Optional (USD by default)
+  locale="en_EN"            // Optional
+  pattern="##,### !"        // Optional
+  decimal: ','              // Optional
+  group: '.'                // Optional
+/>
+```
+
 ## TODO
 - [ ] create description
 - [ ] create documentation
