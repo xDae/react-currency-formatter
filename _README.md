@@ -31,21 +31,19 @@ import Currency from 'react-currency-formatter';
 />
 ```
 
-## Support
-
-Please [open an issue](https://github.com/xDae/react-currency-formatter/issues/new) for support.
-
-## Contributing
-
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/xDae/react-currency-formatter/compare/).
+## TODO
+- [ ] create description
+- [ ] create documentation
+- [ ] create component playground (w/ Storybook)
 
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.com/package/react-currency-formatter
+[npm]: https://www.npmjs.org/package/npm-package
 
 [coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/user/repo
+
 
