@@ -4,6 +4,8 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
+### 💻  [DEMO!](https://xdae.github.io/react-currency-formatter/)
+
 ## Usage
 
 #### Simple
