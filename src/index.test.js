@@ -4,6 +4,10 @@ import Adapter from 'enzyme-adapter-react-16';
 
 import Currency from './index';
 
+global.requestAnimationFrame = function(callback) {
+  setTimeout(callback, 0);
+};
+
 Enzyme.configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
@@ -12,8 +16,6 @@ it('renders without crashing', () => {
       quantity={89}
     />
   );
-
-  console.log(wrapper.debug());
 
   expect(wrapper.text()).toEqual('$89.00');
 });
