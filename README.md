@@ -26,7 +26,6 @@ import Currency from 'react-currency-formatter';
 import Currency from 'react-currency-formatter';
 
 <Currency
-  className="my-classname"  // Optional
   quantity={45685}          // Required
   currency="USD"            // Optional (USD by default)
   locale="en_EN"            // Optional
