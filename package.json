@@ -14,7 +14,6 @@
     "url": "https://github.com/xDae/react-currency-formatter/issues"
   },
   "files": [
-    "css",
     "lib"
   ],
   "devDependencies": {
@@ -22,29 +21,30 @@
     "@kadira/storybook": "^2.35.3",
     "@kadira/storybook-addon-knobs": "^1.7.1",
     "@kadira/storybook-addon-options": "^1.0.2",
-    "babel-cli": "^6.24.0",
-    "babel-core": "^6.18.2",
-    "babel-eslint": "^7.2.1",
-    "babel-jest": "^19.0.0",
-    "babel-preset-env": "^1.2.2",
-    "babel-preset-react": "^6.23.0",
-    "enzyme": "^2.8.0",
-    "eslint": "^3.18.0",
-    "eslint-config-react-app": "^0.6.2",
-    "eslint-plugin-flowtype": "^2.30.4",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
-    "jest": "^19.0.2",
-    "np": "^2.13.1",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dev-utils": "^0.5.2",
-    "react-dom": "^15.4.2",
-    "rimraf": "^2.6.1"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "react": "^16.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dev-utils": "^4.1.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0",
+    "rimraf": "^2.6.2"
   },
   "peerDependencies": {
-    "react": "15.x"
+    "react": "16.x"
   },
   "scripts": {
     "start": "npm run storybook",
@@ -58,7 +58,7 @@
   "keywords": [
     "react-component",
     "currency",
-		"formatter"
+    "formatter"
   ],
   "jest": {
     "moduleFileExtensions": [
@@ -69,5 +69,8 @@
     "testPathIgnorePatterns": [
       "<rootDir>/(lib|docs|node_modules)/"
     ]
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0"
   }
 }

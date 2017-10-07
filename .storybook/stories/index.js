@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { withKnobs, text, number, select } from '@kadira/storybook-addon-knobs';
 
-import _ from 'lodash';
+import values from 'lodash/values';
 
 import Currency from '../../src';
 
@@ -13,7 +13,7 @@ const currencyList = {};
 Object.keys(new Currency().symbols).map(currency => currencyList[currency] = currency);
 
 const locales = {};
-_.values(new Currency().defaultLocales, 'age').map(locale => locales[locale] = locale);
+values(new Currency().defaultLocales, 'age').map(locale => locales[locale] = locale);
 
 stories.addWithInfo('Default', () => (
   <Currency

@@ -1,8 +1,11 @@
 # 💵 react currency formatter
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+[![npm](https://img.shields.io/npm/dt/react-currency-formatter.svg)](https://www.npmjs.com/package/react-currency-formatter)
+[![npm](https://img.shields.io/npm/v/react-currency-formatter.svg)](https://www.npmjs.com/package/react-currency-formatter)
+[![David](https://img.shields.io/david/xDae/react-currency-formatter.svg)](https://david-dm.org/xDae/react-currency-formatter)
+[![Travis](https://img.shields.io/travis/xDae/react-currency-formatter.svg)](https://travis-ci.org/xDae/react-currency-formatter)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
 
 ### 💻  [DEMO!](https://xdae.github.io/react-currency-formatter/)
 
@@ -28,8 +31,8 @@ import Currency from 'react-currency-formatter';
   currency="USD"            // Optional (USD by default)
   locale="en_EN"            // Optional
   pattern="##,### !"        // Optional
-  decimal: ','              // Optional
-  group: '.'                // Optional
+  decimal=","               // Optional
+  group="."                 // Optional
 />
 ```
 
@@ -40,14 +43,3 @@ Please [open an issue](https://github.com/xDae/react-currency-formatter/issues/n
 ## Contributing
 
 Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/xDae/react-currency-formatter/compare/).
-
-
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.com/package/react-currency-formatter
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
-
