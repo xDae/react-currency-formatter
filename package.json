@@ -2,20 +2,37 @@
   "name": "react-currency-formatter",
   "version": "1.0.0-0",
   "description": "react-currency-formatter React component",
-  "main": "lib/index.js",
-  "author": "jose miguel bejarano",
+  "keywords": [
+    "currency",
+    "formatter",
+    "react-component"
+  ],
   "homepage": "https://github.com/xDae/react-currency-formatter",
+  "bugs": {
+    "url": "https://github.com/xDae/react-currency-formatter/issues"
+  },
   "license": "MIT",
+  "author": "jose miguel bejarano",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/xDae/react-currency-formatter.git"
   },
-  "bugs": {
-    "url": "https://github.com/xDae/react-currency-formatter/issues"
+  "scripts": {
+    "build": "rimraf lib && babel src --out-dir lib --ignore test.js --copy-files",
+    "build-storybook": "build-storybook -o docs",
+    "publish": "np",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
-  "files": [
-    "lib"
-  ],
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",
     "@kadira/storybook": "^2.35.3",
@@ -27,6 +44,7 @@
     "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "codecov": "^2.3.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
     "eslint": "^4.8.0",
@@ -46,20 +64,6 @@
   "peerDependencies": {
     "react": "16.x"
   },
-  "scripts": {
-    "start": "npm run storybook",
-    "build": "rimraf lib && babel src --out-dir lib --ignore test.js --copy-files",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs",
-    "publish": "np"
-  },
-  "keywords": [
-    "react-component",
-    "currency",
-    "formatter"
-  ],
   "jest": {
     "moduleFileExtensions": [
       "jsx",
@@ -69,8 +73,5 @@
     "testPathIgnorePatterns": [
       "<rootDir>/(lib|docs|node_modules)/"
     ]
-  },
-  "dependencies": {
-    "prop-types": "^15.6.0"
   }
 }
