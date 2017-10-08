@@ -14,15 +14,17 @@
   "license": "MIT",
   "author": "jose miguel bejarano",
   "files": [
-    "lib"
+    "dist"
   ],
-  "main": "lib/index.js",
+  "main": "dist/react-currency-formatter.cjs.js",
+  "module": "dist/react-currency-formatter.esm.js",
+  "browser": "dist/react-currency-formatter.umd.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/xDae/react-currency-formatter.git"
   },
   "scripts": {
-    "build": "rimraf lib && babel src --out-dir lib --ignore test.js --copy-files",
+    "build": "rimraf dist && rollup -c",
     "build-storybook": "build-storybook -o docs",
     "publish": "np",
     "start": "npm run storybook",
@@ -42,6 +44,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-jest": "^21.2.0",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "codecov": "^2.3.0",
@@ -59,7 +62,12 @@
     "react-dev-utils": "^4.1.0",
     "react-dom": "^16.0.0",
     "react-test-renderer": "^16.0.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -70,9 +78,11 @@
       "js",
       "json"
     ],
-    "setupFiles": ["<rootDir>/src/setupTests"],
+    "setupFiles": [
+      "<rootDir>/src/setupTests"
+    ],
     "testPathIgnorePatterns": [
-      "<rootDir>/(lib|docs|node_modules)/"
+      "<rootDir>/(dist|docs|node_modules)/"
     ]
   }
 }

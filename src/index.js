@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import locales from './locales';
 import defaultLocales from './default-locales';
 import symbols from './symbols';
 
-class ReactCurrencyFormatter extends Component {
+class ReactCurrencyFormatter extends React.Component {
   getFormatter(options) {
     let locale, currency, symbol, pattern, decimal, group;
 
