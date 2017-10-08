@@ -29,7 +29,7 @@
     "publish": "np",
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
-    "test": "jest",
+    "test": "BABEL_ENV=test jest",
     "test:watch": "jest --watch"
   },
   "dependencies": {
