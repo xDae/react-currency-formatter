@@ -1,12 +1,12 @@
-import React from 'react';
+// import React from 'react';
 import PropTypes from 'prop-types';
 
 import locales from './locales';
 import defaultLocales from './default-locales';
 import symbols from './symbols';
 
-class ReactCurrencyFormatter extends React.Component {
-  getFormatter(options) {
+const ReactCurrencyFormatter = props => {
+  const getFormatter = options => {
     let locale, currency, symbol, pattern, decimal, group;
 
     // Helper Functions
@@ -169,37 +169,33 @@ class ReactCurrencyFormatter extends React.Component {
       else { formattedNumber = format(n, negativeFormat);	}
       return formattedNumber;
     };
-  }
+  };
 
-  format(number, options) {
-    const formatterFunction = this.getFormatter(options);
+  const format = (number, options) => {
+    const formatterFunction = getFormatter(options);
 
     return formatterFunction(number);
   }
 
-  render() {
-    const {
-      quantity,
-      currency,
-      symbol,
-      locale,
-      decimal,
-      group,
-      pattern
-    } = this.props;
+  const {
+    quantity,
+    currency,
+    symbol,
+    locale,
+    decimal,
+    group,
+    pattern
+  } = props;
 
-    return (
-      this.format(quantity, {
-        currency,
-        symbol,
-        locale,
-        decimal,
-        group,
-        pattern
-      })
-    );
-  }
-}
+  return (format(quantity, {
+    currency,
+    symbol,
+    locale,
+    decimal,
+    group,
+    pattern
+  }));
+};
 
 ReactCurrencyFormatter.defaultProps = {
   currency: 'USD'

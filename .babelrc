@@ -1,15 +1,15 @@
 {
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      },
+    "modules": false
+    }]
+  ],
   "env": {
-    "production": {
-      "presets": [
-        ["env", {
-          "modules": false
-        }],
-        "react"
-      ]
-    },
     "test": {
-      "presets": ["env", "react"]
+      "presets": ["es2015", "react"]
     }
   }
 }

@@ -1,32 +1,30 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import replace from 'rollup-plugin-replace';
 import babel from 'rollup-plugin-babel';
 import pkg from './package.json';
+
+const globals = {
+  'react': 'React',
+  'prop-types': 'PropTypes'
+};
+
+const external = ['react', 'prop-types'];
 
 export default [
   // browser-friendly UMD build
   {
-    input: 'src/index.js',
+    input: 'src/main.js',
     output: {
+      name: 'reactCurrencyFormatter',
       file: pkg.browser,
-      format: 'umd'
+      format: 'umd',
+      globals
     },
-    name: 'reactCurrencyFormatter',
-    external: ['react', 'prop-types'],
-    globals: {
-      'react': 'React',
-      'prop-types': 'PropTypes'
-    },
+    external,
     plugins: [
-      resolve(),
-      commonjs({
-        namedExports: {
-          'node_modules/react/react.js': ['Component']
-        }
-      }),
+      resolve(), // so Rollup can find `ms`
+      commonjs(), // so Rollup can convert `ms` to an ES module
       babel({
-        plugins: ['external-helpers'],
         exclude: ['node_modules/**']
       })
     ]
@@ -36,30 +34,19 @@ export default [
   // (We could have three entries in the configuration array
   // instead of two, but it's quicker to generate multiple
   // builds from a single configuration where possible, using
-  // the `targets` option which can specify `dest` and `format`)
+  // an array for the `output` option, where we can specify
+  // `file` and `format` for each target)
   {
-    input: 'src/index.js',
-    external: ['react', 'prop-types'],
-    globals: {
-      'react': 'React',
-      'prop-types': 'PropTypes'
-    },
+    input: 'src/main.js',
+    external,
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' }
+      { file: pkg.main, format: 'cjs', globals },
+      { file: pkg.module, format: 'es', globals }
     ],
     plugins: [
-      resolve(),
-      commonjs({
-        namedExports: {
-          'node_modules/react/react.js': ['Component']
-        }
-      }),
       babel({
-        plugins: ['external-helpers'],
         exclude: ['node_modules/**']
-      }),
-      replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
+      })
     ]
   }
 ];
