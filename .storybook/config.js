@@ -1,18 +1,9 @@
-import { configure, addDecorator, setAddon } from '@storybook/react';
-import { setOptions } from '@storybook/addon-options'
-import infoAddon from '@storybook/react-addon-info';
+import { configure } from '@storybook/react';
 
-setAddon(infoAddon);;
+// automatically import all files ending in *.stories.js
+const req = require.context('../stories', true, /.stories.js$/);
+function loadStories() {
+  req.keys().forEach((filename) => req(filename));
+}
 
-setOptions({
-  name: 'react currency formatter',
-  url: 'https://github.com/kadirahq/storybook-addon-options',
-  goFullScreen: false,
-  showLeftPanel: true,
-  showDownPanel: true,
-  showSearchBox: false,
-  downPanelInRight: true,
-  sortStoriesByKind: false
-});
-
-configure(() => require('./stories'), module);
+configure(loadStories, module);

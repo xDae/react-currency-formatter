@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import locales from './locales';
@@ -187,7 +187,7 @@ const ReactCurrencyFormatter = props => {
     pattern
   } = props;
 
-  return (format(quantity, {
+  return (format(props.quantity, {
     currency,
     symbol,
     locale,
