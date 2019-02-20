@@ -24,6 +24,7 @@ export default {
   'BTN': 'Nu.',
   'BWP': 'P',
   'BYR': 'p.',
+  'BYN': 'р.',
   'BZD': 'BZ$',
   'CAD': '$',
   'CDF': 'FC',
