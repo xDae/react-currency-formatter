@@ -5,7 +5,8 @@ import locales from './locales';
 import defaultLocales from './default-locales';
 import symbols from './symbols';
 
-const ReactCurrencyFormatter = props => {
+
+export const format = (number, options) => {
   const getFormatter = options => {
     let locale, currency, symbol, pattern, decimal, group;
 
@@ -170,13 +171,12 @@ const ReactCurrencyFormatter = props => {
       return formattedNumber;
     };
   };
+  const formatterFunction = getFormatter(options);
 
-  const format = (number, options) => {
-    const formatterFunction = getFormatter(options);
+  return formatterFunction(number);
+}
 
-    return formatterFunction(number);
-  }
-
+const ReactCurrencyFormatter = props => {
   const {
     quantity,
     currency,
