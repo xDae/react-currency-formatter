@@ -38,16 +38,16 @@ import Currency from 'react-currency-formatter';
 #### TypeScript
 
 ```ts
-import * as React from 'react'
-import * as CurrencyFormatter from 'react-currency-formatter'
+import React from 'react'
+import CurrencyFormatter from 'react-currency-formatter'
 
 type Props = {
-	price: number,
-	currency: string,
+  price: number,
+  currency: string,
 }
 
-const ProductionPrice: React.SFC<Props> = (props: Props) => (
-	<CurrencyFormatter quantity={props.price} currency={props.currency} />
+const ProductionPrice: React.FC<Props> = (props) => (
+  <CurrencyFormatter quantity={props.price} currency={props.currency} />
 )
 
 export default ProductionPrice
