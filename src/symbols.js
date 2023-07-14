@@ -155,7 +155,7 @@ export default {
   'UGX': 'USh',
   'USD': '$',
   'UYU': '$U',
-  'UZS': 'лв',
+  'UZS': 'so\'m',
   'VEF': 'Bs',
   'VND': '₫',
   'VUV': 'VT',
